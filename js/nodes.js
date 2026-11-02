@@ -8,6 +8,9 @@
              paragraph should start.
    photo     Path to the node's photo. If the file is missing, the node shows
              its placeholder (color + icon) automatically.
+   photoFocus  Optional. Which part of the photo the circle shows, as
+             "left-right top-bottom". "50% 0%" is the top middle, and leaving
+             it out centers the photo. The opened card always shows it all.
    photoAlt  Describes the photo for screen readers. Update it to match the
              photo you add.
    color     Placeholder color, used until there is a photo.
@@ -62,6 +65,7 @@ const NODES = [
     label: "Community Building",
     blurb: "Outside of work, I am a passionate community builder, and have planned and facilitated numerous holiday parties, camping trips, hiking clubs, and other events for families in our community since having my own child in 2022. I relish getting families outdoors to move, play, and have fun together. Hosting events over the years has given me the opportunity to build quality relationships with parents and children from a variety of backgrounds.",
     photo: "images/node-community-events.jpg",
+    photoFocus: "50% 15%",
     photoAlt: "Five young children climbing over large granite boulders among pine trees, one of them in a sparkly blue dress",
     color: "#E6CCCB",
     icon: "heart",
@@ -150,6 +154,7 @@ const NODES = [
     // card uses photoAlt.
     const img = document.createElement("img");
     img.alt = "";
+    if (node.photoFocus) img.style.objectPosition = node.photoFocus;
     img.addEventListener("load", function () { item.photoLoaded = true; });
     img.addEventListener("error", function () { img.remove(); });
     img.src = node.photo;
