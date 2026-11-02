@@ -10,7 +10,7 @@
   --terracotta: #C8714A;
   --terracotta-text: #A85A36; /* darker, so small link text is easy to read */
   --white: #FFFFFF;
-  --overlay: rgba(47, 74, 58, 0.8);
+  --overlay: rgba(200, 113, 74, 0.92); /* terracotta, matches the line on hover */
 
   --font-heading: "Fraunces", Georgia, "Times New Roman", serif;
   --font-body: "Nunito", "Helvetica Neue", Arial, sans-serif;
@@ -279,6 +279,12 @@ button:focus-visible {
   border: 3px solid var(--white);
   border-radius: 50%;
   box-shadow: 0 0 0 1.5px var(--sage), 0 6px 16px rgba(47, 74, 58, 0.16);
+  transition: border-color var(--speed) ease, box-shadow var(--speed) ease;
+}
+
+.node:focus-visible .node__photo {
+  border-color: var(--terracotta);
+  box-shadow: 0 0 0 1.5px var(--terracotta), 0 6px 16px rgba(47, 74, 58, 0.16);
 }
 
 .node__placeholder,
@@ -330,6 +336,11 @@ button:focus-visible {
   .node:hover { transform: scale(1.08); }
   .node:hover .node__label { opacity: 1; }
   .node:hover .node__placeholder svg { opacity: 0; }
+
+  .node:hover .node__photo {
+    border-color: var(--terracotta);
+    box-shadow: 0 0 0 1.5px var(--terracotta), 0 6px 16px rgba(47, 74, 58, 0.16);
+  }
 }
 
 /* Touch screens have no hover, so labels sit under the nodes all the time. */
