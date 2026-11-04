@@ -33,7 +33,7 @@ const NODES = [
   },
   {
     label: "RA",
-    blurb: "I was a Resident Assistant (RA) in the dorms for my Sophomore and Junior year in college, then was promoted to an Assistant Resident Director (ARD) in my Senior year. As an RA, I co-managed floors of 60 residents, facilitating social programming, mediating disputes, and responding to health concerns.\n\nAs an ARD, I selected and supervised nine Community Facilitators (Resident Assistants) and eight Desk Receptionists. I also planned and executed frequent staff development and bonding activities to help promote cohesion and collaboration across the team.",
+    blurb: "I was a Resident Assistant (RA) in the dorms for my Sophomore and Junior year in college, then was promoted to an Assistant Resident Director (ARD) in my Senior year. As an RA, I co-managed floors of 60 residents, facilitating social programming, mediating disputes, and responding to health concerns.\n\nAs an ARD, I selected and supervised nine RAs and eight Desk Receptionists. I also planned and executed frequent staff development and bonding activities to help promote cohesion and collaboration across the team.",
     photo: "images/node-ra.jpg",
     photoAlt: "A smiling group of thirteen people in team caps and sweatshirts posing on a sports field at night, with three of them holding baseball bats",
     color: "#EDDFB4",
